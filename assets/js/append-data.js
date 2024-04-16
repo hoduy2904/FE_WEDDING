@@ -1,9 +1,9 @@
-import banners from "./assets/data/banner.json" assert { "type": "json" };
-import couples from "./assets/data/couple-data.json" assert { "type": "json" };
-import stories from "./assets/data/our-stories.json" assert { "type": "json" };
-import events from "./assets/data/events.json" assert { "type": "json" };
-import subPeoples from "./assets/data/subpeople.json" assert { "type": "json" };
-import albums from "./assets/data/albums.json" assert { "type": "json" };
+import banners from "/.../../assets/data/banner.json" assert { "type": "json" };
+import couples from "/./../assets/data/couple-data.json" assert { "type": "json" };
+import stories from "/../../assets/data/our-stories.json" assert { "type": "json" };
+import events from "/../../assets/data/events.json" assert { "type": "json" };
+import subPeoples from "/../../assets/data/subpeople.json" assert { "type": "json" };
+import albums from "/../../assets/data/albums.json" assert { "type": "json" };
 
 var photoGalleries = [];
 if (albums) photoGalleries = albums;
