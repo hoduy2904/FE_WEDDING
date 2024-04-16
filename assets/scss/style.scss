@@ -10,9 +10,26 @@ nav.navbar {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 5;
   padding: 8px 32px;
   background: #ffffff2e;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  &.scroll {
+    position: fixed;
+    background: #fff;
+  }
+  &.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    &.active {
+      color: red;
+    }
+  }
+  &.navbar-light .navbar-nav .nav-link {
+    color: #333;
+    &.active {
+      color: red;
+    }
+  }
 }
 #collapsibleNavId {
   padding: 0 32px;
@@ -196,6 +213,10 @@ nav.navbar {
     @include tablet {
       width: 150px;
       height: 150px;
+    }
+    @include Large {
+      width: 212px;
+      height: 212px;
     }
     &::before {
       background: #fff;
@@ -532,6 +553,12 @@ nav.navbar {
     li {
       position: relative;
       display: block;
+
+      &:hover > a {
+        color: #fbfbfb;
+        background: #ec2328;
+        border: 1px solid #ec2328;
+      }
       &.active {
         a {
           color: #fbfbfb;
@@ -634,4 +661,59 @@ nav.navbar {
       transition: all ease-in-out 0.3s;
     }
   }
+}
+
+.audio-play {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #df4758;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 32px;
+  z-index: 10;
+  left: 32px;
+  outline: none;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: rgba(242, 59, 67, 0.3);
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    -webkit-animation: biilogo-pulse 1s infinite;
+    animation: biilogo-pulse 1s infinite;
+  }
+}
+
+@keyframes biilogo-pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.95, 0.95, 0.95);
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+footer {
+  margin-right: 30px;
+  text-align: right;
 }

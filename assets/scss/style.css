@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  transition: all 0.2s ease-in;
+}
+
 h1,
 h2,
 h3,
@@ -37,6 +45,10 @@ ul {
   margin-bottom: 0;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 body {
   font-family: dosis, sans-serif;
   font-size: 14px;
@@ -54,9 +66,26 @@ nav.navbar {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 5;
   padding: 8px 32px;
   background: rgba(255, 255, 255, 0.1803921569);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+nav.navbar.scroll {
+  position: fixed;
+  background: #fff;
+}
+nav.navbar.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+nav.navbar.navbar-dark .navbar-nav .nav-link.active {
+  color: red;
+}
+nav.navbar.navbar-light .navbar-nav .nav-link {
+  color: #333;
+}
+nav.navbar.navbar-light .navbar-nav .nav-link.active {
+  color: red;
 }
 
 #collapsibleNavId {
@@ -217,7 +246,7 @@ nav.navbar {
 .the-couple:hover .couple-img h4 {
   opacity: 1;
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) {
   .the-couple.reverse .couple-about {
     margin-right: -20px;
     margin-left: unset;
@@ -235,10 +264,16 @@ nav.navbar {
   box-shadow: 0 0 15px #eee;
   flex: 0 0 auto;
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) {
   .the-couple .couple-img {
     width: 150px;
     height: 150px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .the-couple .couple-img {
+    width: 212px;
+    height: 212px;
   }
 }
 .the-couple .couple-img::before {
@@ -271,7 +306,7 @@ nav.navbar {
   font-family: dosis, sans-serif;
   transition: all ease-in-out 0.3s;
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) {
   .the-couple .couple-about {
     margin-left: -20px;
   }
@@ -397,7 +432,7 @@ nav.navbar {
   background-size: cover;
   background-attachment: fixed;
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) {
   .countdown {
     background-attachment: initial !important;
     background-position: center;
@@ -555,6 +590,11 @@ nav.navbar {
   position: relative;
   display: block;
 }
+.important-people .nav.nav-tabs li:hover > a {
+  color: #fbfbfb;
+  background: #ec2328;
+  border: 1px solid #ec2328;
+}
 .important-people .nav.nav-tabs li.active a {
   color: #fbfbfb;
   background: #ec2328;
@@ -641,4 +681,50 @@ nav.navbar {
   z-index: 4;
   background: rgba(236, 35, 40, 0.8705882353);
   transition: all ease-in-out 0.3s;
+}
+
+.audio-play {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #df4758;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 32px;
+  z-index: 10;
+  left: 32px;
+  outline: none;
+}
+.audio-play:focus {
+  border: none;
+  outline: none;
+}
+.audio-play::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: rgba(242, 59, 67, 0.3);
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  animation: biilogo-pulse 1s infinite;
+}
+
+@keyframes biilogo-pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+footer {
+  margin-right: 30px;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

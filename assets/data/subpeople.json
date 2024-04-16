@@ -1,0 +1,14 @@
+[
+    {
+       "id":"bride",
+       "name":"Nhã Uyên",
+       "description":"Nàng điều dưỡng",
+       "image": "https://cdn.biihappy.com/ziiweb/website/65865cbb4f23736e3c0dae94/0966013a7964e804eef6b4c8131aef3e.jpeg"
+    },
+    {
+        "id":"groom",
+        "name":"Minh Hiền",
+        "description":"Chàng Giáo Viên",
+        "image": "https://cdn.biihappy.com/ziiweb/website/65865cbb4f23736e3c0dae94/0966013a7964e804eef6b4c8131aef3e.jpeg"
+     }
+]
