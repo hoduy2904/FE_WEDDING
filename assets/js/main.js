@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         success: function (data) {},
         complete: function (data) {
           localStorage.setItem("isShowJoin", true);
+          $("#modelId").modal("hide");
         },
       });
     });
