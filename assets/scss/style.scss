@@ -48,6 +48,7 @@ nav.navbar {
   height: 750px;
   position: relative;
   .banner-caption {
+    width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,7 +106,7 @@ nav.navbar {
       height: 100%;
       object-fit: cover;
     }
-    &::before {
+    .img-item::before {
       content: "";
       position: absolute;
       width: 100%;
@@ -722,5 +723,58 @@ input.required {
   border: 1px solid #ec2328;
   &::placeholder {
     color: #f13538d5;
+  }
+}
+
+.owl-nav {
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  top: 50%;
+  padding: 0 50px;
+  justify-content: space-between;
+  width: 100%;
+  .owl-prev,
+  .owl-next {
+    outline: none;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: rgba(248, 255, 254, 0.81);
+    width: 55px;
+    height: 55px;
+    line-height: 50px;
+    margin-top: -30px;
+    text-align: center;
+    border-radius: 60px;
+    border: 4px solid rgba(248, 255, 254, 0.91);
+    opacity: 1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(248, 255, 254, 0.384);
+    }
+  }
+
+  .swiper-button-prev {
+    &::before {
+      font-family: "FontAwesome";
+      content: "\f104";
+      font-size: 20px;
+      color: #3e7884;
+    }
+  }
+  .swiper-button-next {
+    &::before {
+      font-family: "FontAwesome";
+      content: "\f105";
+      font-size: 20px;
+      color: #3e7884;
+    }
   }
 }

@@ -1,23 +1,24 @@
-import banners from "../data/banner.json" assert { "type": "json" };
-import couples from "../data/couple-data.json" assert { "type": "json" };
-import stories from "../data/our-stories.json" assert { "type": "json" };
-import events from "../data/events.json" assert { "type": "json" };
-import subPeoples from "../data/subpeople.json" assert { "type": "json" };
-import albums from "../data/albums.json" assert { "type": "json" };
+async function getJsonFile(url, callback) {
+  let data = await fetch(url)
+    .then((res) => {
+      if (res.ok) return res.json();
+    })
+    .then((data) => callback(data));
+  return data;
+}
 
 var photoGalleries = [];
-if (albums) photoGalleries = albums;
-document.addEventListener("DOMContentLoaded", function (e) {
-  loadBanner();
-  loadCouple();
-  loadStories();
-  loadEvents();
-  loadSubPeople();
-  loadAlbums();
+document.addEventListener("DOMContentLoaded", async function (e) {
+  await getJsonFile("/assets/data/couple-data.json", loadCouple);
+  await getJsonFile("/assets/data/banner.json", loadBanner);
+  await getJsonFile("/assets/data/our-stories.json", loadStories);
+  await getJsonFile("/assets/data/events.json", loadEvents);
+  await getJsonFile("/assets/data/subpeople.json", loadSubPeople);
+  await getJsonFile("/assets/data/albums.json", loadAlbums);
   loadInitScript();
 });
 
-function loadBanner() {
+function loadBanner(banners) {
   let dataString = "";
   for (let banner in banners) {
     dataString += `<div class="img-item">
@@ -27,7 +28,7 @@ function loadBanner() {
   $(".banner-carousel-image").html(dataString);
 }
 
-function loadCouple() {
+function loadCouple(couples) {
   let dataString = "";
   for (let i in couples) {
     dataString += `<div class="col-lg-6 col-sm-12">
@@ -71,7 +72,7 @@ function loadCouple() {
   $(".row[data-postion=couple]").html(dataString);
 }
 
-function loadStories() {
+function loadStories(stories) {
   let dataString = "";
   for (let i in stories) {
     dataString += `<div class="row ${i % 2 == 0 ? "reverse" : ""} story-item mt-5">
@@ -99,7 +100,7 @@ function loadStories() {
   $(".story-timeline").html(dataString);
 }
 
-function loadEvents() {
+function loadEvents(events) {
   let dataString = "";
   for (let i in events) {
     dataString += `
@@ -140,7 +141,7 @@ function loadEvents() {
   $("[data-position=events]").html(dataString);
 }
 
-function loadSubPeople() {
+function loadSubPeople(subPeoples) {
   let dataString = "";
   for (let i in subPeoples) {
     dataString += `
@@ -172,7 +173,8 @@ function loadSubPeople() {
   $(".tab-content[data-position=impPeople]").html(dataString);
 }
 
-function loadAlbums() {
+function loadAlbums(albums) {
+  photoGalleries = albums;
   let dataString = "";
   for (let i in albums) {
     dataString += `
@@ -192,6 +194,15 @@ function loadAlbums() {
 function loadInitScript() {
   $(".banner-carousel-image").owlCarousel({
     items: 1,
+    nav: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    smartSpeed: 1500,
+    navText: [
+      "<div class='swiper-button-prev'></div>",
+      "<div class='swiper-button-next'></div>",
+    ],
   });
   function masonryGridSetting() {
     if ($(".masonry-gallery").length) {

@@ -106,6 +106,8 @@ nav.navbar.navbar-light .navbar-nav .nav-link.active {
   position: relative;
 }
 .carousel-banner .banner-caption {
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,7 +169,7 @@ nav.navbar.navbar-light .navbar-nav .nav-link.active {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.carousel-banner .banner-carousel-image::before {
+.carousel-banner .banner-carousel-image .img-item::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -735,4 +737,48 @@ input.required::-moz-placeholder {
 }
 input.required::placeholder {
   color: rgba(241, 53, 56, 0.8352941176);
+}
+
+.owl-nav {
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  top: 50%;
+  padding: 0 50px;
+  justify-content: space-between;
+  width: 100%;
+}
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  outline: none;
+}
+.owl-nav .swiper-button-prev,
+.owl-nav .swiper-button-next {
+  background: rgba(248, 255, 254, 0.81);
+  width: 55px;
+  height: 55px;
+  line-height: 50px;
+  margin-top: -30px;
+  text-align: center;
+  border-radius: 60px;
+  border: 4px solid rgba(248, 255, 254, 0.91);
+  opacity: 1;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.owl-nav .swiper-button-prev:hover,
+.owl-nav .swiper-button-next:hover {
+  background: rgba(248, 255, 254, 0.384);
+}
+.owl-nav .swiper-button-prev::before {
+  font-family: "FontAwesome";
+  content: "\f104";
+  font-size: 20px;
+  color: #3e7884;
+}
+.owl-nav .swiper-button-next::before {
+  font-family: "FontAwesome";
+  content: "\f105";
+  font-size: 20px;
+  color: #3e7884;
 }/*# sourceMappingURL=style.css.map */
