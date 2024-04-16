@@ -248,12 +248,30 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Xác nhận tham dự</h5>
+            <div>
+              <h5 class="modal-title">Xác nhận thông tin</h5>
+              <span>
+                Nhằm chuẩn bị tốt nhất cho buổi tiếp đoán anh/chị đến chung vui cùng gia
+                đình, anh/chị giúp em xác nhận các thông tin sau
+              </span>
+            </div>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
+            <div class="form-group">
+              <label for="">Tên khách mời <span class="text-danger">*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                required
+                name=""
+                id="customerName"
+                aria-describedby="helpId"
+                placeholder="Điền tên của khách mời"
+              />
+            </div>
             <div class="form-group">
               <label for="">Số người đi cùng với bạn?</label>
               <select class="form-control" name="" id="numberJoin">

@@ -725,4 +725,14 @@ nav.navbar.navbar-light .navbar-nav .nav-link.active {
 footer {
   margin-right: 30px;
   text-align: right;
+}
+
+input.required {
+  border: 1px solid #ec2328;
+}
+input.required::-moz-placeholder {
+  color: rgba(241, 53, 56, 0.8352941176);
+}
+input.required::placeholder {
+  color: rgba(241, 53, 56, 0.8352941176);
 }/*# sourceMappingURL=style.css.map */

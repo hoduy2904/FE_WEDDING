@@ -132,18 +132,23 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     $(".btn-modal-join").on("click", function (e) {
       let numberJoin = $("#numberJoin").val();
-      let url =
-        "https://docs.google.com/forms/d/e/1FAIpQLScFAXKG8Oc7wQp-SlwRm8zyZMxtBH89ggOoNAvktZ_I1Dq3dw/formResponse?&submit=Submit?usp=pp_url&entry.320452822=" +
+      let customerName = $("#customerName").val();
+      if (!customerName || customerName.trim() === "") {
+        $("#customerName").addClass("required");
+      } else {
+        $("#customerName").removeClass("required");
+        let url = `https://docs.google.com/forms/d/e/1FAIpQLScFAXKG8Oc7wQp-SlwRm8zyZMxtBH89ggOoNAvktZ_I1Dq3dw/formResponse?&submit=Submit?usp=pp_url&entry.320452822=${customerName}&entry.1716490126=${numberJoin}`;
         numberJoin;
-      $.ajax({
-        url: url,
-        dataType: "jsonp",
-        success: function (data) {},
-        complete: function (data) {
-          localStorage.setItem("isShowJoin", true);
-          $("#modelId").modal("hide");
-        },
-      });
+        $.ajax({
+          url: url,
+          dataType: "jsonp",
+          success: function (data) {},
+          complete: function (data) {
+            localStorage.setItem("isShowJoin", true);
+            $("#modelId").modal("hide");
+          },
+        });
+      }
     });
   }
 

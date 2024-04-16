@@ -119,13 +119,13 @@ function loadEvents() {
             <div class="event-title text-center-sm">
               <ul>
                 <li class="text-center">
-                  <i class="fa fa-calendar-check-o"></i> ${events[i].date}
+                <i class="fa-regular fa-calendar"></i> ${events[i].date}
                 </li>
-                <li class="text-center"><i class="fa fa-clock-o"></i> ${events[i].time}</li>
+                <li class="text-center"><i class="fa-regular fa-clock"></i> ${events[i].time}</li>
               </ul>
             </div>
             <p class="text-center-sm">
-              <i class="fa fa-map-marker"></i>
+            <i class="fa-solid fa-location-dot"></i>
               ${events[i].address}
             </p>
             <a href="${events[i].mapLink}" class="text-center-sm" target="_blank">

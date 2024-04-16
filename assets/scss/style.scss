@@ -717,3 +717,10 @@ footer {
   margin-right: 30px;
   text-align: right;
 }
+
+input.required {
+  border: 1px solid #ec2328;
+  &::placeholder {
+    color: #f13538d5;
+  }
+}
