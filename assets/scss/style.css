@@ -504,7 +504,7 @@ nav.navbar.navbar-light .navbar-nav .nav-link.active {
 }
 #wedding-event .event-dates .wrapper-banner-event {
   position: sticky;
-  top: 0;
+  top: 80px;
   height: -moz-fit-content;
   height: fit-content;
 }

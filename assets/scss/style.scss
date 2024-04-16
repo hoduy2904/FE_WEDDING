@@ -470,7 +470,7 @@ nav.navbar {
     position: relative;
     .wrapper-banner-event {
       position: sticky;
-      top: 0;
+      top: 80px;
       height: fit-content;
       @include LargeMaxWidth {
         display: none;
