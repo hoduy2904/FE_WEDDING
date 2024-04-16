@@ -752,6 +752,12 @@ input.required::placeholder {
 .owl-nav .owl-next {
   outline: none;
 }
+@media (max-width: 576px) {
+  .owl-nav .owl-prev,
+  .owl-nav .owl-next {
+    display: none;
+  }
+}
 .owl-nav .swiper-button-prev,
 .owl-nav .swiper-button-next {
   background: rgba(248, 255, 254, 0.81);

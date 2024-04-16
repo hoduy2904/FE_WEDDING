@@ -736,6 +736,9 @@ input.required {
   width: 100%;
   .owl-prev,
   .owl-next {
+    @include mobileMaxWidth {
+      display: none;
+    }
     outline: none;
   }
   .swiper-button-prev,
