@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container d-flex flex-column" style="height: 100vh">
+      <div class="row m-auto" style="min-width: 700px">
+        <div class="col-12">
+          <h1 class="text-center mb-5">Get IMG Google Drive</h1>
+          <div class="form-group">
+            <label for="">Link</label>
+            <input
+              type="text"
+              class="form-control"
+              name=""
+              id="link"
+              aria-describedby="helpId"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group">
+            <label for="">Result</label>
+            <textarea class="form-control" name="" id="result" rows="3"></textarea>
+          </div>
+          <div class="text-right">
+            <button class="btn btn-primary" id="submit">Get URL</button>
+            <button class="btn btn-danger" id="copy">COPY</button>
+          </div>
+        </div>
+      </div>
+      <footer class="text-right mb-3 text-secondary">Made by DuyHo</footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#submit").on("click", function (e) {
+        let link = $("#link").val();
+        $.get(link, function (data) {
+          const regexLink = /(https:\/\/lh3\.\w+\.com\/[\w\-\=\/]+)/;
+          let link = data.match(regexLink);
+          if (link.length > 0) {
+            $("#result").text(link[0]);
+          } else $("#result").text("Không tìm thấy");
+        }).fail(() => {
+          $("#result").text("Lỗi");
+        });
+      });
+
+      $("#copy").on("click", function () {
+        let result = $("#result").select();
+        navigator.clipboard.writeText(result.val());
+      });
+    </script>
+  </body>
+</html>
