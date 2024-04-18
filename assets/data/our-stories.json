@@ -1,26 +1,26 @@
 [
-    {
-        "title":"Bạn có tin vào chuyện tình yêu online không?",
-        "time":"November 15 2019",
-        "image":"./assets/imgs/c6c2fd78dde96aae4e0c8cd016056d46.jpeg",
-        "description":"Đôi khi tình yêu không chỉ là những lời nói mà đôi lúc chỉ cần những cái nắm tay đúng lúc và đúng thời điểm cũng tạo nên một câu chuyện thật tuyệt với. Chúng mình hai con người xuất phát ở hai điểm cực khác nhau nhưng lại tìm được nhau ở những chặng đường mà không ai ngờ tới."
-    },
-    {
-        "title":"Những Sự Kiện Ra Mắt Không Ai Ngờ",
-        "time":"December 02 2022",
-        "image":"https://cdn.biihappy.com/ziiweb/website/65865cbb4f23736e3c0dae94/89d491c156ef30c74158bfe8ed648719.jpeg",
-        "description":"Ngày mà cô ấy tốt nghiệp cũng là ngày đầu tiên tôi được diện kiến phụ huynh nhà Nàng. Những bức ảnh gia đình đầu tiên được lưu lạ"
-    },
-    {
-        "title":"Phút Giây Cầu Hôn",
-        "time":"December 22 2024",
-        "image":"https://cdn.biihappy.com/ziiweb/default/website/eb13d6af3ecce1c4c852a6b09913bdca.jpeg",
-        "description":"5 năm bên nhau không phải là quãng thời gian quá dài, nhưng đủ cho chúng ta nhận ra được rất nhiều điều. Yêu nhau, vun vén hạnh phúc và cùng nỗ lực vượt qua những khó khăn trong cuộc sống. Chúng ta từ 2 con người xa lạ mà bước vào cuộc đời nhau. Và giờ đây chúng ta tiếp tục cùng nhau sang trang mới. Giây phút anh ngỏ lời “Em đồng ý làm vợ anh nhé!”, đó có thể là lần đầu tiên mình run đến vậy"
-    },
-    {
-        "title":"Ngày Lễ Đính Hôn",
-        "time":"30/03/2024",
-        "image":"https://cdn.biihappy.com/ziiweb/default/website/eb13d6af3ecce1c4c852a6b09913bdca.jpeg",
-        "description":"“Tiếng trái tim đôi ta đập thật nhanh. Thì thầm lời yêu thương. Ngày tình về chung đôi...” Sau bao nhiêu chờ đợi, cuối cùng ngày vui của chúng ta cũng tới rồi. Cảm ơn vì mình đã luôn là một phần trong cuộc sống của nhau. Em và anh không chỉ là người yêu mà chúng ta còn là tri kỷ. Ngày hôm nay, em sẽ là cô dâu của anh và sau này sẽ là mẹ của các con anh."
-    }
+  {
+    "title": "Bạn có tin vào chuyện tình yêu không khoảng cách không?",
+    "time": "November 15 2019",
+    "image": "./assets/imgs/c6c2fd78dde96aae4e0c8cd016056d46.jpeg",
+    "description": "Chúng tôi hai con người của hai thế giới nàng cô bé mới học năm hai của trường cao đẳng, tôi một anh nhân viên chuyên quản lí trang thiết bị máy móc của xưởng thực hành, ấy vấy mà chúng tôi lại tìm thấy nhau theo một cách không ngờ tới. Hôm sinh nhật cô ấy cũng là ngày cô ấy cần một sự động viên, an ủi, một cuộc gọi sau 20h, hôm nay sinh nhật em thầy có thể đến chúc mừng sinh nhật em không, ấy vậy là một lời mời chính thức để di chuyển từ quận 12 sang tân bình để rồi một cái nắm cổ tay, xoa đầu an ủi đúng lúc và đúng thời điểm và thế là câu chuyện tình yêu của chúng tôi bắt đầu. Ngày hôm sau những tin nhắn chia sẽ về cuộc sống trở nên nhiều hơn và thế là bọn mình quen nhau"
+  },
+  {
+    "title": "Những Sự Kiện Ra Mắt Không Ai Ngờ",
+    "time": "November 08 2022",
+    "image": "https://lh3.googleusercontent.com/drive-viewer/AKGpihbvTlg49GPjjggwaRTkVZqWutIbrLr3Zb0s3NCqm3fgwbHRa9jgD8aBW46d8qiY0bN2DZ77JN1QyI-4EytEEJb2fL6yoBZdiug",
+    "description": "Ngày mà cô ấy tốt nghiệp cũng là ngày đầu tiên tôi được diện kiến phụ huynh nhà Nàng tôi được gặp gỡ cha mẹ và cả bé út nữa. Những bức ảnh gia đình đầu tiên được lưu lại và chúng tôi cùng về quê cô ấy trên chiếc xe máy Vision mà đến nay chúng tôi vẫn hay gọi là bé trâu cày, vì nó đã cùng tôi và em xây dựng nên những câu chuyện cổ tích của hai đứa"
+  },
+  {
+    "title": "Phút Giây Cầu Hôn",
+    "time": "December 22 2024",
+    "image": "https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/412268991_3593770914211190_5720582788254993085_n.jpg?stp=cp6_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=kAWaUegBlLgAb5p4KTy&_nc_ht=scontent.fsgn5-15.fna&oh=00_AfCy9fuVsUQLpNDGy5J1U2RYCGKNWyaK8d8ErZBXa5IrMA&oe=6626767C",
+    "description": "5 năm bên nhau không phải là quãng thời gian quá dài, nhưng đủ cho chúng ta nhận ra được rất nhiều điều. Yêu nhau, vun vén hạnh phúc và cùng nỗ lực vượt qua những khó khăn trong cuộc sống. Chúng ta từ 2 con người xa lạ mà bước vào cuộc đời nhau. Và giờ đây chúng ta tiếp tục cùng nhau sang trang mới. Giây phút anh ngỏ lời “Em đồng ý làm vợ anh nhé!”, đó có thể là lần đầu tiên mình run đến vậy"
+  },
+  {
+    "title": "Ngày Lễ Đính Hôn",
+    "time": "March 30 2024",
+    "image": "https://lh3.googleusercontent.com/drive-viewer/AKGpihajFsI6JgvH4AdvTBuJhiHdEmJkrsxld4tvyewHG1USmiLbzPgZcscxWUbC1tb1kSh98xNkKUPZdsNBz1rdD3JG0b65N3wmvg",
+    "description": "“Tiếng trái tim đôi ta đập thật nhanh. Thì thầm lời yêu thương. Ngày tình về chung đôi...” Sau bao nhiêu chờ đợi, cuối cùng ngày vui của chúng ta cũng tới rồi. Cảm ơn vì mình đã luôn là một phần trong cuộc sống của nhau. Em và anh không chỉ là người yêu mà chúng ta còn là tri kỷ. Ngày hôm nay, em sẽ là cô dâu của anh và sau này sẽ là mẹ của các con anh."
+  }
 ]
