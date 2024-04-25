@@ -8,7 +8,7 @@ async function getJsonFile(url, callback) {
 }
 
 var photoGalleries = [];
-document.addEventListener("DOMContentLoaded", async function (e) {
+document.addEventListener("readystatechange", async function (e) {
   await getJsonFile("/assets/data/couple-data.json", loadCouple);
   await getJsonFile("/assets/data/banner.json", loadBanner);
   await getJsonFile("/assets/data/our-stories.json", loadStories);
@@ -21,10 +21,11 @@ function loadBanner(banners) {
   let dataString = "";
   for (let banner in banners) {
     dataString += `<div class="img-item">
-      <img loading="lazy" src="${banners[banner]}" alt="" />
+      <img src="${banners[banner]}" alt="" />
     </div>`;
   }
   $(".banner-carousel-image").html(dataString);
+  loadInitScript();
 }
 
 function loadCouple(couples) {
@@ -191,7 +192,10 @@ function loadAlbums(albums) {
   }
 
   $(".masonry-gallery[data-position=albums]").html(dataString);
+  masonryGridSetting();
+  masonryGridSetting();
 }
+
 function loadInitScript() {
   $(".banner-carousel-image").owlCarousel({
     items: 1,
@@ -205,17 +209,21 @@ function loadInitScript() {
       "<div class='swiper-button-next'></div>",
     ],
   });
-  function masonryGridSetting() {
-    if ($(".masonry-gallery").length) {
-      var $grid = $(".masonry-gallery").masonry({
-        itemSelector: ".grid-item",
-        columnWidth: ".grid-item",
-        percentPosition: true,
-      });
-    }
-  }
+}
 
-  masonryGridSetting();
+function masonryGridSetting() {
+  if ($(".masonry-gallery").length) {
+    console.log("length");
+    var $grid = $(".masonry-gallery").masonry({
+      itemSelector: ".grid-item",
+      columnWidth: ".grid-item",
+      percentPosition: true,
+    });
+
+    $grid.imagesLoaded().progress(function () {
+      $grid.masonry("layout");
+    });
+  }
 
   // ALBUM GALLERIES
   $(document).on("click", ".btn-see-more-gallery", function (e) {
