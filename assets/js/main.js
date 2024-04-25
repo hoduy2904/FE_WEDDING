@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (e) {
+  loadInitScript();
   if ($("#clock").length) {
     function timeElapse(date) {
       var current = Date();

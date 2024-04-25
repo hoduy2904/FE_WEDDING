@@ -15,14 +15,13 @@ document.addEventListener("DOMContentLoaded", async function (e) {
   await getJsonFile("/assets/data/events.json", loadEvents);
   await getJsonFile("/assets/data/subpeople.json", loadSubPeople);
   await getJsonFile("/assets/data/albums.json", loadAlbums);
-  loadInitScript();
 });
 
 function loadBanner(banners) {
   let dataString = "";
   for (let banner in banners) {
     dataString += `<div class="img-item">
-      <img src="${banners[banner]}" alt="" />
+      <img loading="lazy" src="${banners[banner]}" alt="" />
     </div>`;
   }
   $(".banner-carousel-image").html(dataString);
@@ -38,7 +37,7 @@ function loadCouple(couples) {
           } flex-md-row"
         >
           <div class="couple-img">
-            <img src="${couples[i].image}" alt="" />
+            <img loading="lazy" src="${couples[i].image}" alt="" />
             <h4>${couples[i].position}</h4>
           </div>
           <div class="couple-about">
@@ -78,7 +77,7 @@ function loadStories(stories) {
     dataString += `<div class="row ${i % 2 == 0 ? "reverse" : ""} story-item mt-5">
         <div class="col-12 col-sm-6">
           <div class="image-story">
-            <img src="${stories[i].image}" alt="" />
+            <img loading="lazy" src="${stories[i].image}" alt="" />
           </div>
         </div>
         <div class="col-12 col-sm-6">
@@ -153,6 +152,7 @@ function loadSubPeople(subPeoples) {
                     <div class="our-team">
                       <div class="team-img">
                         <img
+                        loading="lazy"
                           src="${subPeoples[i].image}"
                           alt=""
                         />
@@ -181,6 +181,7 @@ function loadAlbums(albums) {
         <div class="col-md-4 col-sm-6 col-xs-6 mix grid-item btn-see-more-gallery">
               <div class="item">
                 <img
+                  loading="lazy"
                   src="${albums[i].src}"
                   alt=""
                 />
